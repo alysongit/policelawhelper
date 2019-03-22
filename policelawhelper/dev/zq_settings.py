@@ -46,8 +46,8 @@ INSTALLED_APPS = [
     'xadmin',
     'crispy_forms',
     'reversion',
-    'ckeditor',
-    'ckeditor_uploader',
+    'ckeditor', # 富文本编辑器
+    'ckeditor_uploader',# 富文本编辑器上传图片模块
 
     'users.apps.UsersConfig',
     'cms.apps.CmsConfig',
@@ -165,7 +165,7 @@ CKEDITOR_CONFIGS = {
     'default': {
         'skin': 'moono-lisa',
         'toolbar_Basic': [
-            ['Source', '-', 'Bold', 'Italic']
+            ['Source', '-', 'Bold', 'Italic','Underline'] #Bold = 加粗 Italic = 倾斜
         ],
         'toolbar_Full': [
             ['Styles', 'Format', 'Bold', 'Italic', 'Underline', 'Strike', 'SpellChecker', 'Undo', 'Redo'],
@@ -174,9 +174,9 @@ CKEDITOR_CONFIGS = {
             ['TextColor', 'BGColor'],
             ['Smiley', 'SpecialChar'], ['Source'],
         ],
-        'toolbar': 'Full',
-        'height': 1000,
-        'width': 1200,
+        'toolbar': 'Full',# 工具条功能
+        'height': 1000,# 编辑器高度
+        'width': 1200, # 编辑器宽
         'filebrowserWindowWidth': 940,
         'filebrowserWindowHeight': 725,
     }

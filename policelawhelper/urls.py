@@ -40,7 +40,7 @@ urlpatterns = [
     path(r'admin/', xadmin.site.urls),
 
     url(r'^media/(?P<path>.*)$', serve, {"document_root": settings.MEDIA_ROOT}),
-    path('ckeditor/', include('ckeditor_uploader.urls')),
+    path('ckeditor/', include('ckeditor_uploader.urls')),  #添加ckeditor的url到项目中
 
     path(r'api/app/', include("users.urls")),
     path(r'api/app/', include("cms.urls")),
@@ -52,4 +52,4 @@ urlpatterns = [
 ]
 
 from django.conf.urls.static import static
-urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT) ## 没有这一句无法显示上传的图片
