@@ -143,8 +143,8 @@ USE_TZ = True
 STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, "static")
 
-MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
-MEDIA_URL = '/media/'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media').replace('\\', '/') #Django Debug模式下配置静态资源的两种方式
+MEDIA_URL = '/media/'#Django Debug模式下配置静态资源的两种方式
 CKEDITOR_UPLOAD_PATH = 'upload/'
 
 # 日志配置
